@@ -1,0 +1,159 @@
+@import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --color-bg-main: #f8fafc;
+    --color-bg-surface: #ffffff;
+
+    /* Brand Colors */
+    --color-primary: #1d5ed2;
+    --color-primary-soft: #eef4ff;
+    --color-accent: #f47920;
+    --color-accent-hover: #d96616;
+
+    /* Text Colors */
+    --color-heading: #0f172a;
+    --color-text: #334155;
+    --color-muted: #64748b;
+
+    /* Borders */
+    --color-border: #e2e8f0;
+
+    /* Status */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+
+    /* Typography */
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Radius */
+    --radius-btn: 0.625rem;
+    --radius-card: 1rem;
+    --radius-sm: 0.375rem;
+
+    /* Shadow */
+    --shadow-soft: 0 12px 30px rgba(29, 94, 210, 0.08);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-bg-main);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-weight: 700;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .custom-container {
+    @apply mx-auto max-w-[1450px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12;
+  }
+
+  .custom-padding {
+    @apply px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Background Colors */
+  .bg-bg-main {
+    background-color: var(--color-bg-main);
+  }
+  .bg-bg-surface {
+    background-color: var(--color-bg-surface);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-primary-soft {
+    background-color: var(--color-primary-soft);
+  }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .bg-accent-hover {
+    background-color: var(--color-accent-hover);
+  }
+  .bg-heading {
+    background-color: var(--color-heading);
+  }
+  .bg-border {
+    background-color: var(--color-border);
+  }
+
+  /* Text Colors */
+  .text-heading {
+    color: var(--color-heading);
+  }
+  .text-text {
+    color: var(--color-text);
+  }
+  .text-muted {
+    color: var(--color-muted);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .text-primary-soft {
+    color: var(--color-primary-soft);
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+  .text-success {
+    color: var(--color-success);
+  }
+
+  /* Border Colors */
+  .border-border {
+    border-color: var(--color-border);
+  }
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+
+  /* Typography */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  /* Border Radius */
+  .rounded-card {
+    border-radius: var(--radius-card);
+  }
+  .rounded-btn {
+    border-radius: var(--radius-btn);
+  }
+
+  /* Shadows */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+}
